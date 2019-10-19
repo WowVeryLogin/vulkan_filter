@@ -58,7 +58,7 @@ if __name__ == "__main__":
     newimg = np.copy(image)
 
     funcs = [dist, color]
-    w = Window(7, 7)
+    w = Window(3, 3)
     for i in range(3):
         newimg[:, :, i] = w.convolve(image[:, :, i], funcs)
     imageio.imwrite("result.png", newimg.astype(np.uint8), format='png')
